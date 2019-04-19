@@ -7,7 +7,7 @@ app.get('/',(req,res)=>{
     res.send("Yup It Works")
 })
 
-const port = process.env.port || 5001;
+const port = process.env.PORT || 5001;
 
 app.listen(port,()=>{
     console.log(`Server started on port ${port}`)
