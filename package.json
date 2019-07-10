@@ -4,13 +4,15 @@
   "description": "app to share public and private stories",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Naman Khurana",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "mongoose": "^5.5.2",
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.18.11",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
