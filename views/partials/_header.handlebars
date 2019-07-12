@@ -1,18 +1,26 @@
 <nav class="grey darken-3">
     <div class="nav-wrapper">
-        <a href="/stories" class="brand-logo center">StoryBooks</a>
+        <a href="/" class="brand-logo center">StoryBooks</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="left hide-on-med-and-down">
             {{#if user}}
             <li><a href="/dashboard">Welcome {{user.firstName}}</a></li>
             <li class="divider"></li>
+            {{else}}
+            {{/if}}
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            {{#if user}}
             <li><a href="/dashboard"><i class="fas fa-columns"></i> Dashboard</a></li>
             <li class="divider"></li>
             <li><a href="/stories/my"><i class="far fa-window-restore"></i> My Stories</a></li>
             <li class="divider"></li>
+            {{else}}
+            {{/if}}
+            <li><a href="/stories"><i class="fas fa-book"></i>Public Stories</a></li>
+            {{#if user}}
             <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             {{else}}
-            <li><a href="/stories"><i class="fas fa-book"></i>Public Stories</a></li>
             {{/if}}
         </ul>
     </div>
